@@ -4,7 +4,7 @@
 Extract organization names and domains for chaining with other tools such as Github Dorker(organizations) and subdomain scraper(domains).
 
 ## Usage
-```
+```bash
 root@kali-linux:~/MachineYadav/My-Tools/Certex# Certex --help
 usage: Certex [-h] [--- | -d DOMAIN | -w WORDLIST] [-oD OUTPUT_DIRECTORY] [-t THREADS] [-b]
 
