@@ -30,6 +30,6 @@ Enjoy bug hunting
 1. Extract from single domain 
 * `Certex -d google.com`
 2. Extract from wordlist
-* `Certex -w /path/to/wodlist -oD /tmp/ -d yahoo.com
+* `Certex -w /path/to/wodlist -oD /tmp/ -d yahoo.com`
 3. Read and extract from stdin
 * `echo -ne "google.com\nyahoo.com" Certex ---`
