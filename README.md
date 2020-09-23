@@ -31,5 +31,5 @@ Enjoy bug hunting
 * `Certex -d google.com`
 2. Extract from wordlist
 * `Certex -w /path/to/wodlist -oD /tmp/ -d yahoo.com
-3. Stdin
+3. Read and extract from stdin
 * `echo -ne "google.com\nyahoo.com" Certex ---`
