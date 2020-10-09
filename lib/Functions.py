@@ -19,8 +19,8 @@ def starter(argv):
         if not argv.domain:
             print("{} Output directory specified but not domain".format(ColorObj.bad))
             exit()
-    if not wordlist:
-        if not domain:
+    if not argv.wordlist:
+        if not argv.domain:
             if not argv.stdin:
                 print("{} Use --help".format(ColorObj.bad))
                 exit()
