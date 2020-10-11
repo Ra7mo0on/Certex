@@ -5,8 +5,8 @@ from argparse import ArgumentParser
 from concurrent.futures import ThreadPoolExecutor
 
 from lib.Globals import ColorObj
+from lib.Functions import write_output
 from lib.Functions import starter, get_cert_data
-from lib.Functions import write_output, write_output_directory
 
 parser = ArgumentParser(description=colored('Extract data from SSL/TLS certificates', color='yellow'), epilog=colored("Enjoy bug hunting", color='yellow'))
 input_group = parser.add_mutually_exclusive_group()
@@ -38,6 +38,6 @@ with ThreadPoolExecutor(max_workers=argv.threads) as Submitter:
         orgs.update([org])
 
 if argv.output_directory:
-    write_output_directory(argv.output_directory, argv.domain, orgs, commons)
+    write_output(argv.domain, orgs, commons, filepath = argv.output_directory)
 if argv.output:
     write_output(argv.output, orgs, commons)
