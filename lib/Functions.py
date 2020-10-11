@@ -7,8 +7,8 @@ from lib.PathFunctions import PathFunction
 from lib.Globals import ColorObj
 
 def banner():
-    from pyfiglet import print_figlet as puff
-    puff('CertEx', font='larry3d', colors='BLUE')
+    banner = '\x1b[5m\x1b[1m\x1b[40m\x1b[31m   ______          __           \n  / ____/__  _____/ /____  _  __\n / /   / _ \\/ ___/ __/ _ \\| |/_/\n/ /___/  __/ /  / /_/  __/>  <  \n\\____/\\___/_/   \\__/\\___/_/|_|  \n                                \n\x1b[0m'
+    print(banner)
     print(colored('Organization and Domain Extractor', color='red', attrs=['bold']))
 
 def starter(argv):
