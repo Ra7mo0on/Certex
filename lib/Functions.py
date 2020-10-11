@@ -1,5 +1,5 @@
-import socket
 from sys import stdin
+from socket import socket
 from ssl import create_default_context
 from termcolor import colored
 
@@ -35,7 +35,7 @@ def starter(argv):
 
 def get_cert_data(hostname: str) -> tuple:
     ctx = create_default_context()
-    with ctx.wrap_socket(socket.socket(), server_hostname=hostname) as s:
+    with ctx.wrap_socket(socket(), server_hostname=hostname) as s:
         s.connect((hostname, 443))
         cert = s.getpeercert()
     subject = dict(x[0] for x in cert['subject'])
