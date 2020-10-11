@@ -1,5 +1,5 @@
 # Certificate Extractor
-<div align=”center”>![Certex](lib/Certex.png)</div>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Certex](lib/Certex.png)
 
 ## Description
 Extract organization names and domains for chaining with other tools such as Github Dorker(organizations) and subdomain scraper(domains).
