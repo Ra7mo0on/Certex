@@ -47,7 +47,7 @@ def get_cert_data(hostname: str) -> tuple:
 def write_output(filename, orgs, commons, filepath=None) -> tuple:
     path_fn = PathFunction()
     if filepath:
-        output_file = open(path_fn.slasher(filepath) + filename + '.certex', 'a')
+        output_file = open(path_fn.ender(filepath, '/') + filename + '.certex', 'a')
     else:
         output_file = open(filename, 'a')
     for org in orgs:
