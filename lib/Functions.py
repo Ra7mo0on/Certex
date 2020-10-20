@@ -3,8 +3,8 @@ from socket import socket
 from ssl import create_default_context
 from termcolor import colored
 
-from lib.PathFunctions import PathFunction
 from lib.Globals import ColorObj
+from lib.PathFunctions import PathFunction
 
 def banner():
     banner = '\x1b[5m\x1b[1m\x1b[40m\x1b[31m   ______          __           \n  / ____/__  _____/ /____  _  __\n / /   / _ \\/ ___/ __/ _ \\| |/_/\n/ /___/  __/ /  / /_/  __/>  <  \n\\____/\\___/_/   \\__/\\___/_/|_|  \n                                \n\x1b[0m'
