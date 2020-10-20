@@ -1,4 +1,4 @@
-from sys import stdin
+from sys import stdin, exit
 from socket import socket
 from ssl import create_default_context
 from termcolor import colored
@@ -10,11 +10,11 @@ def banner():
     banner = '\x1b[5m\x1b[1m\x1b[40m\x1b[31m   ______          __           \n  / ____/__  _____/ /____  _  __\n / /   / _ \\/ ___/ __/ _ \\| |/_/\n/ /___/  __/ /  / /_/  __/>  <  \n\\____/\\___/_/   \\__/\\___/_/|_|  \n                                \n\x1b[0m'
     print(banner)
     print(colored('Organization and Domain Extractor', color='red', attrs=['bold']))
+    exit()
 
 def starter(argv):
     if argv.banner:
         banner()
-        exit(0)
     if argv.output_directory:
         if not argv.domain:
             print("{} Output directory specified but not domain".format(ColorObj.bad))
