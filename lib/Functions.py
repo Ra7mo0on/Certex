@@ -1,10 +1,10 @@
-from sys import stdin, exit
+from sys import stdin
 from socket import socket
-from ssl import create_default_context
 from termcolor import colored
+from ssl import create_default_context
 
 from lib.Globals import ColorObj
-from lib.PathFunctions import PathFunction
+from lib.PathFunctions import ender
 
 def banner():
     banner = '\x1b[5m\x1b[1m\x1b[40m\x1b[31m   ______          __           \n  / ____/__  _____/ /____  _  __\n / /   / _ \\/ ___/ __/ _ \\| |/_/\n/ /___/  __/ /  / /_/  __/>  <  \n\\____/\\___/_/   \\__/\\___/_/|_|  \n                                \n\x1b[0m'
@@ -25,8 +25,7 @@ def starter(argv):
                 print("{} Use --help".format(ColorObj.bad))
                 exit()
             else:
-                stdinarray = stdin.read().split('\n')
-                return (line.rstrip('\n').strip(' ') for line in stdinarray if line)
+                return (line.rstrip('\n') for line in stdin.read().split('\n') if line)
         else:
             return [argv.domain.strip(' ')]
     else:
@@ -45,9 +44,8 @@ def get_cert_data(hostname: str) -> tuple:
     return common, org
 
 def write_output(filename, orgs, commons, filepath=None) -> tuple:
-    path_fn = PathFunction()
     if filepath:
-        output_file = open(path_fn.ender(filepath, '/') + filename + '.certex', 'a')
+        output_file = open(ender(filepath, '/') + filename + '.certex', 'a')
     else:
         output_file = open(filename, 'a')
     for org in orgs:
