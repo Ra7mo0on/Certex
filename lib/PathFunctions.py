@@ -1,10 +1,10 @@
 def merge(xpath: str, ypath: str) -> str:
-    xpath = self.urlerslasher(xpath)
-    ypath = self.unstarter(ypath, '/')
+    xpath = urlerslasher(xpath)
+    ypath = unstarter(ypath, '/')
     return xpath + ypath
 
 def urlerslasher(xpath: str) -> str:
-    return self.ender(self.urler(xpath), '/')
+    return ender(urler(xpath), '/')
 
 def starter(xpath:str, ypath: str) -> str:
     if xpath[0] != ypath:
