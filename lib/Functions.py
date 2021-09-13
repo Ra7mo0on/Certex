@@ -39,6 +39,7 @@ def get_cert_data(hostname: str) -> tuple:
         cert = s.getpeercert()
     subject = dict(x[0] for x in cert['subject'])
     issued_to = subject
+    print(issued_to)
     org, common = issued_to['organizationName'], issued_to['commonName']
     print(f"{ColorObj.good} Found {common}, {org}", end="\n")
     return common, org
