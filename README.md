@@ -34,3 +34,7 @@ Enjoy bug hunting
 * `Certex -w /path/to/wodlist -oD /tmp/ -d yahoo.com`
 3. Read and extract from stdin
 * `echo -ne "google.com\nyahoo.com" | Certex ---`
+
+## Support
+If you wanted to support me freely for the tools I create, chekout [this out](https://github.com/machinexa2/machinexa2/blob/master/SUPPORT.md).
+
